@@ -14,9 +14,11 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # loading the saved models
 
-diabetes_model = pickle.load(open(f'{working_dir}/Models/diabetes_pred_model.sav', 'rb'))
+diabetes_model = pickle.load(open(f'{working_dir}/models/diabetes_pred_model.sav', 'rb'))
 
-heart_disease_model = pickle.load(open(f'{working_dir}/Models/heart_pred_model.sav', 'rb'))
+heart_disease_model = pickle.load(open(f'{working_dir}/models/heart_pred_model.sav', 'rb'))
+
+asthma_pred_model = pickle.load(open(f'{working_dir}/models/asthma_pred_model.sav', 'rb'))
 
 # sidebar for navigation
 with st.sidebar:
