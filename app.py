@@ -171,7 +171,7 @@ if selected == 'Asthma':
         Gender = st.slider('Gender: 0 = Female; 1 = Male', 0, 1, 0)
 
     with col3:
-        ss = st.slider('Smoking Status', 0, 1, 0)
+        ss = st.slider('Smoking Status', 0, 2, 0)
 
     with col1:
         peak = st.slider('Peak Flow  ', 150, 400,150)
