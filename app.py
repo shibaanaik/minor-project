@@ -280,7 +280,7 @@ if selected == 'Lung Cancer':
         if lungcancer_prediction[0] == 1:
             lungcancer_diagnosis = 'The person is having lung cancer'
         else:
-            lungcancer_diagnosis = 'The person does have lung cancer'
+            lungcancer_diagnosis = 'The person does not have lung cancer'
 
     st.success(lungcancer_diagnosis)
     
