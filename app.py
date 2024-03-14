@@ -205,10 +205,10 @@ if selected == 'Asthma':
 
     
 # lungs cancer Disease Prediction Page
-if selected == 'LungCancer':
+if selected == 'Lung Cancer':
 
     # page title
-    st.title('LungCancer Disease Prediction using ML')
+    st.title('Lung Cancer Disease Prediction using ML')
 
     col1, col2, col3,col4 = st.columns(4)
 
