@@ -224,7 +224,7 @@ if selected == 'LungCancer':
     with col4:
         Yellowfinger = st.slider('Yellow Fingers',1,2,1)
 
-     with col1:
+    with col1:
         Anxity = st.slider('Anxity', 1,2,1)
 
     with col2:
@@ -236,7 +236,7 @@ if selected == 'LungCancer':
     with col4:
         Fatigue = st.slider('Fatigue',1, 2, 1)   
 
- with col1:
+    with col1:
         Allergy = st.slider('Allergy',1, 2, 1)
 
     with col2:
@@ -249,7 +249,7 @@ if selected == 'LungCancer':
         Cough= st.slider('Coughing ', 1, 2, 1)   
 
 
-with col1:
+    with col1:
         Shortnes_Breath = st.slider('Shortness of Breath',1, 2, 1)
 
     with col2:
