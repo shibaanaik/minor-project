@@ -20,15 +20,18 @@ heart_disease_model = pickle.load(open(f'{working_dir}/models/heart_pred_model.s
 
 asthma_pred_model = pickle.load(open(f'{working_dir}/models/asthma_pred_model.sav', 'rb'))
 
+lungcancer_pred_model = pickle.load(open(f'{working_dir}/models/lungcancer_pred_model.sav', 'rb'))
+
+
 # sidebar for navigation
 with st.sidebar:
     selected = option_menu('Multiple Disease Prediction System',
 
                            ['Diabetes',
                             'Heart Disease',
-                            'Asthma'],
+                            'Asthma','Lung Cancer"],
                            menu_icon='hospital-fill',
-                           icons=['activity', 'heart', 'lungs'],
+                           icons=['activity', 'heart', 'lungs','cancer'],
                            default_index=0)
 
 
@@ -197,3 +200,87 @@ if selected == 'Asthma':
             asthma_diagnosis = 'The person does have asthma'
 
     st.success(asthma_diagnosis)
+
+
+
+    
+# lungs cancer Disease Prediction Page
+if selected == 'LungCancer':
+
+    # page title
+    st.title('LungCancer Disease Prediction using ML')
+
+    col1, col2, col3,col4 = st.columns(4)
+
+    with col1:
+        age = st.slider('Age', 21, 87, 21)
+
+    with col2:
+        Gender = st.slider('Gender: 0 = Female; 1 = Male', 0, 1, 0)
+
+    with col3:
+        smoking = st.slider('Smoking Status', 1, 2, 1)
+
+    with col4:
+        Yellowfinger = st.slider('Yellow Fingers',1,2,1)
+
+     with col1:
+        Anxity = st.slider('Anxity', 1,2,1)
+
+    with col2:
+        Pp = st.slider('Peer Pressure',1,2,1)
+
+    with col3:
+        Chronic_Des = st.slider('Cronic Disease', 1, 2, 1)
+
+    with col4:
+        Fatigue = st.slider('Fatigue',1, 2, 1)   
+
+ with col1:
+        Allergy = st.slider('Allergy',1, 2, 1)
+
+    with col2:
+        Wheezing = st.slider('Weezing', 1, 2, 1)
+
+    with col3:
+       Alcohol_Con  = st.slider('Alcohol Consumption',1, 2, 1)
+
+    with col4:
+        Cough= st.slider('Coughing ', 1, 2, 1)   
+
+
+with col1:
+        Shortnes_Breath = st.slider('Shortness of Breath',1, 2, 1)
+
+    with col2:
+     Swallowing_Diff = st.slider('Swallowing Difficulty',1, 2, 1)
+
+    with col3:
+      Chest_Pain = st.slider('Chest Pain',1, 2, 1)
+
+   
+
+
+
+
+    
+    # code for Prediction
+    lungcancer_diagnosis = ''
+
+    # creating a button for Prediction
+
+    if st.button('LungCancer Disease Test Result'):
+
+        user_input = [age, Gender, smoking,Yellowfinger, Anxity,Pp,Chronic_Des,Fatigue,Allergy,Wheezing,Alcohol_Con,Cough,Shortnes_Breath,Swallowing_Diff,Chest_Pain]
+
+        # user_input = [float(x) for x in user_input]
+
+        lungcancer_prediction = lungcancer_pred_model.predict([user_input])
+
+        if lungcancer_prediction[0] == 1:
+            lungcancer_diagnosis = 'The person is not having lungcancer'
+        else:
+            lungcancer_diagnosis = 'The person does have lungcancer'
+
+    st.success(lungcancer_diagnosis)
+    
