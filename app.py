@@ -264,23 +264,23 @@ if selected == 'Lung Cancer':
 
 
     
-    # code for Prediction
+    # code for lung cancer Prediction
     lungcancer_diagnosis = ''
 
     # creating a button for Prediction
 
-    if st.button('LungCancer Disease Test Result'):
+    if st.button('Lung Cancer Disease Test Result'):
 
-        user_input = [age, Gender, smoking,Yellowfinger, Anxity,Pp,Chronic_Des,Fatigue,Allergy,Wheezing,Alcohol_Con,Cough,Shortnes_Breath,Swallowing_Diff,Chest_Pain]
+        user_input = [age, Gender, smoking, Yellowfinger, Anxity, Pp, Chronic_Des, Fatigue, Allergy, Wheezing, Alcohol_Con, Cough, Shortnes_Breath, Swallowing_Diff, Chest_Pain]
 
         # user_input = [float(x) for x in user_input]
 
         lungcancer_prediction = lungcancer_pred_model.predict([user_input])
 
         if lungcancer_prediction[0] == 1:
-            lungcancer_diagnosis = 'The person is not having lungcancer'
+            lungcancer_diagnosis = 'The person is having lung cancer'
         else:
-            lungcancer_diagnosis = 'The person does have lungcancer'
+            lungcancer_diagnosis = 'The person does have lung cancer'
 
     st.success(lungcancer_diagnosis)
     
