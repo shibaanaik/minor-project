@@ -29,7 +29,7 @@ with st.sidebar:
 
                            ['Diabetes',
                             'Heart Disease',
-                            'Asthma','Lung Cancer"],
+                            'Asthma','Lung Cancer'],
                            menu_icon='hospital-fill',
                            icons=['activity', 'heart', 'lungs','cancer'],
                            default_index=0)
