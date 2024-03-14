@@ -31,7 +31,7 @@ with st.sidebar:
                             'Heart Disease',
                             'Asthma','Lung Cancer'],
                            menu_icon='hospital-fill',
-                           icons=['activity', 'heart', 'throat','lungs'],
+                           icons=['activity', 'heart', 'lungs','lungs'],
                            default_index=0)
 
 
