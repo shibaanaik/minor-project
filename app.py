@@ -195,9 +195,9 @@ if selected == 'Asthma':
         asthma_prediction = asthma_pred_model.predict([user_input])
 
         if asthma_prediction[0] == 1:
-            asthma_diagnosis = 'The person is not having asthma'
+            asthma_diagnosis = 'The person is having asthma'
         else:
-            asthma_diagnosis = 'The person does have asthma'
+            asthma_diagnosis = 'The person does not have asthma'
 
     st.success(asthma_diagnosis)
 
