@@ -151,9 +151,9 @@ if selected == 'Heart Disease':
         heart_prediction = heart_disease_model.predict([user_input])
 
         if heart_prediction[0] == 1:
-            heart_diagnosis = 'The person is having heart disease'
+            heart_diagnosis = 'The person is not having heart disease'
         else:
-            heart_diagnosis = 'The person does not have any heart disease'
+            heart_diagnosis = 'The person have heart disease'
 
     st.success(heart_diagnosis)
 
