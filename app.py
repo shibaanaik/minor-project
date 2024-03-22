@@ -22,6 +22,9 @@ asthma_pred_model = pickle.load(open(f'{working_dir}/models/asthma_pred_model.sa
 
 lungcancer_pred_model = pickle.load(open(f'{working_dir}/models/lungcancer_pred_model.sav', 'rb'))
 
+breasttcancer_pred_model = pickle.load(open(f'{working_dir}/models/breastcancer_pred_model.sav', 'rb'))
+
+
 
 # sidebar for navigation
 with st.sidebar:
@@ -29,9 +32,9 @@ with st.sidebar:
 
                            ['Diabetes',
                             'Heart Disease',
-                            'Asthma','Lung Cancer'],
+                            'Asthma','Lung Cancer','Breast Cancer'],
                            menu_icon='hospital-fill',
-                           icons=['activity', 'heart', 'lungs','lungs-fill'],
+                           icons=['activity', 'heart', 'lungs','lungs-fill','breast'],
                            default_index=0)
 
 
@@ -283,4 +286,48 @@ if selected == 'Lung Cancer':
             lungcancer_diagnosis = 'The person does not have lung cancer'
 
     st.success(lungcancer_diagnosis)
+
+
+     # asthma Disease Prediction Page
+if selected == 'Breastcancer':
+
+    # page title
+    st.title('Asthma Disease Prediction using ML')
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        a = st.slider('concave points_worst', 0.00, 0.29, 0.00)
+
+    with col2:
+        b = st.slider('perimeter_worst:', 50.4, 251.2, 50.4)
+
+    with col3:
+        ss = st.slider('Smoking Status', 0, 2, 0)
+
+    with col1:
+        peak = st.slider('Peak Flow  ', 150, 400,150)
+
+
+    
+    # code for Prediction
+    breastcancer_diagnosis = ''
+
+    # creating a button for Prediction
+
+    if st.button('Breastca Disease Test Result'):
+
+        user_input = ['concave points_worst','perimeter_worst','concave points_mean','radius_worst','perimeter_mean','area_worst','radius_mean','area_mean']
+
+        # user_input = [float(x) for x in user_input]
+
+        asthma_prediction = breastcancer_pred_model.predict([user_input])
+
+        if diagnosis_prediction[0] == 1:
+            asthma_diagnosis = 'The female is having Breastcancer'
+        else:
+            asthma_diagnosis = 'The female does not have Breastcancer'
+
+    st.success(breastcancer_diagnosis)
+
     
