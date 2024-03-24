@@ -32,7 +32,7 @@ with st.sidebar:
 
                            ['Diabetes',
                             'Heart Disease',
-                            'Asthma','Lung Cancer','Breast Cancer'],
+                            'Lung Cancer','Breast Cancer'],
                            menu_icon='hospital-fill',
                            icons=['activity', 'heart', 'lungs','lungs-fill','clipboard2-heart'],
                            default_index=0)
