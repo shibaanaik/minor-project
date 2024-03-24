@@ -288,11 +288,11 @@ if selected == 'Lung Cancer':
     st.success(lungcancer_diagnosis)
 
 
-     # asthma Disease Prediction Page
+   # breast Disease Prediction Page
 if selected == 'Breastcancer':
 
     # page title
-    st.title('Asthma Disease Prediction using ML')
+    st.title('Breast Cancer Prediction using ML')
 
     col1, col2, col3 = st.columns(3)
 
@@ -303,30 +303,42 @@ if selected == 'Breastcancer':
         b = st.slider('perimeter_worst:', 50.4, 251.2, 50.4)
 
     with col3:
-        ss = st.slider('Smoking Status', 0, 2, 0)
+        c = st.slider('concave points_mean', 0, 0.201, 0)
 
     with col1:
-        peak = st.slider('Peak Flow  ', 150, 400,150)
+        d = st.slider('radius_worst',7.93, 36.04,7.93)
 
+    with col2:
+        e = st.slider('perimeter_mean:', 43.79, 188.500, 43.79)
 
+    with col3:
+        f = st.slider('area_worst', 185.20, 4254, 185.20)
+
+   with col1:
+        g = st.slider('radius_mean', 6.89, 0.29, 28.11)
+
+    with col2:
+        h = st.slider('area_mean', 143.5, 2501, 143.5)
+
+   
     
     # code for Prediction
     breastcancer_diagnosis = ''
 
     # creating a button for Prediction
 
-    if st.button('Breastca Disease Test Result'):
+    if st.button('Breastcancer Disease Test Result'):
 
         user_input = ['concave points_worst','perimeter_worst','concave points_mean','radius_worst','perimeter_mean','area_worst','radius_mean','area_mean']
 
         # user_input = [float(x) for x in user_input]
 
-        asthma_prediction = breastcancer_pred_model.predict([user_input])
+        breastcancer_prediction = breastcancer_pred_model.predict([user_input])
 
         if diagnosis_prediction[0] == 1:
-            asthma_diagnosis = 'The female is having Breastcancer'
+            breastcancer_diagnosis = 'The female is having Breastcancer'
         else:
-            asthma_diagnosis = 'The female does not have Breastcancer'
+            breastcancer_diagnosis = 'The female does not have Breastcancer'
 
     st.success(breastcancer_diagnosis)
 
