@@ -314,7 +314,7 @@ if selected == 'Breastcancer':
     with col3:
         f = st.slider('area_worst', 185.20, 4254, 185.20)
 
-   with col1:
+    with col1:
         g = st.slider('radius_mean', 6.89, 0.29, 28.11)
 
     with col2:
