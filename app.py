@@ -22,7 +22,7 @@ asthma_pred_model = pickle.load(open(f'{working_dir}/models/asthma_pred_model.sa
 
 lungcancer_pred_model = pickle.load(open(f'{working_dir}/models/lungcancer_pred_model.sav', 'rb'))
 
-breasttcancer_pred_model = pickle.load(open(f'{working_dir}/models/breastcancer_pred_model.sav', 'rb'))
+breastcancer_pred_model = pickle.load(open(f'{working_dir}/models/breastcancer_pred_model.sav', 'rb'))
 
 
 
