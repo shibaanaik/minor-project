@@ -309,16 +309,16 @@ if selected == 'Breast Cancer':
         d = st.slider('radius_worst',7.93, 36.04,7.93)
 
     with col2:
-        e = st.slider('perimeter_mean:', 43.79, 188.500, 43.79)
+        e = st.slider('perimeter_mean:', 43.79, 188.50, 43.79)
 
     with col3:
-        f = st.slider('area_worst', 185.20, 4254, 185.20)
+        f = st.slider('area_worst', 185.20, 4254.00, 185.20)
 
     with col1:
         g = st.slider('radius_mean', 6.89, 0.29, 28.11)
 
     with col2:
-        h = st.slider('area_mean', 143.5, 2501, 143.5)
+        h = st.slider('area_mean', 143.5, 2501.0, 143.5)
 
    
     
