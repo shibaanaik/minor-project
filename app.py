@@ -303,7 +303,7 @@ if selected == 'Breast Cancer':
         b = st.slider('perimeter_worst:', 50.4, 251.2, 50.4)
 
     with col3:
-        c = st.slider('concave points_mean', 0, 0.201, 0)
+        c = st.slider('concave points_mean', 0.000, 0.201, 0.000)
 
     with col1:
         d = st.slider('radius_worst',7.93, 36.04,7.93)
