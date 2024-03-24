@@ -289,7 +289,7 @@ if selected == 'Lung Cancer':
 
 
    # breast Disease Prediction Page
-if selected == 'Breastcancer':
+if selected == 'Breast Cancer':
 
     # page title
     st.title('Breast Cancer Prediction using ML')
