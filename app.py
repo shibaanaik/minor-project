@@ -329,7 +329,7 @@ if selected == 'Breast Cancer':
 
     if st.button('Breastcancer Disease Test Result'):
 
-        user_input = ['concave points_worst','perimeter_worst','concave points_mean','radius_worst','perimeter_mean','area_worst','radius_mean','area_mean']
+        user_input = [a,b,c,d,e,f,g,h]
 
         # user_input = [float(x) for x in user_input]
 
