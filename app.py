@@ -333,7 +333,7 @@ if selected == 'Breastcancer':
 
         # user_input = [float(x) for x in user_input]
 
-        Breastcancer_prediction = breastcancer_pred_model.predict([user_input])
+        breastcancer_prediction = breastcancer_pred_model.predict([user_input])
 
         if diagnosis_prediction[0] == 1:
             breastcancer_diagnosis = 'The female is having Breastcancer'
