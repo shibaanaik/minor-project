@@ -336,9 +336,9 @@ if selected == 'Breast Cancer':
         breastcancer_prediction = breastcancer_pred_model.predict([user_input])
 
         if breastcancer_prediction[0] == 1:
-            breastcancer_diagnosis = 'The female is having Breastcancer'
+            breastcancer_diagnosis = 'The female is having Breast Cancer'
         else:
-            breastcancer_diagnosis = 'The female does not have Breastcancer'
+            breastcancer_diagnosis = 'The female does not have Breast Cancer'
 
     st.success(breastcancer_diagnosis)
 
