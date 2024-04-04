@@ -34,7 +34,7 @@ with st.sidebar:
                             'Heart Disease',
                             'Lung Cancer','Breast Cancer'],
                            menu_icon='hospital-fill',
-                           icons=['activity', 'heart', 'lungs','lungs-fill','clipboard2-heart'],
+                           icons=['activity', 'heart', 'lungs','clipboard2-heart'],
                            default_index=0)
 
 
